@@ -57,13 +57,12 @@ TEST_CASE("BAD INPUT"){
     KHABIB DOSENT EXIST!!
     */
     CHECK_THROWS(UFC.add_sub("KHABIB","CONOR"));
-    CHECK_NOTHROW(UFC.add_sub("DANA_WHITE","MICK_MAYNARD"));
-    CHECK_NOTHROW(UFC.add_sub("SEAN_SHELBY","KAMARU_USMAN"));
-    CHECK_NOTHROW(UFC.add_sub("SEAN_SHELBY","FRANCIS_NGANOU"));
-    CHECK_NOTHROW(UFC.add_sub("SEAN_SHELBY","ISRAEL_ADESANYA"));
-    CHECK_NOTHROW(UFC.add_sub("MICK_MAYNARD","DAVISON_FIGUREDO"));
-    CHECK_NOTHROW(UFC.add_sub("MICK_MAYNARD","PAPPER_CHAMP"));
-    CHECK_NOTHROW(UFC.add_sub("MICK_MAYNARD","ALEX_VOLK"));
-    CHECK_NOTHROW(UFC.add_sub("MICK_MAYNARD","OLIVIERA"));
-    CHECK_NOTHROW(UFC.add_sub("MICK_MAYNARD","TEXIERA"));
+    OrgChart bellator;
+    /*
+    cannot iterate an empty chart
+    */
+    CHECK_THROWS(bellator.begin());
+    CHECK_THROWS(bellator.begin_level_order());
+    CHECK_THROWS(bellator.begin_preorder());
+    CHECK_THROWS(bellator.begin_reverse_order());
 }
